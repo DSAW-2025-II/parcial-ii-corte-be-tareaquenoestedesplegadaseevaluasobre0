@@ -1,7 +1,7 @@
-//Middleware para autenticar el token
+//Módulo JWT para la verificación de tokens
 const jwt = require('jsonwebtoken');
 
-//
+//Clave secreta definida desde .env
 const JWT_SECRET = process.env.JWT_SECRET;
 
 //Middleware para autenticar el token
@@ -13,14 +13,16 @@ const authenticateToken = (req, res, next) => {
     //Dado que el token tiene Bearer, se extrae sin el Bearer
     const token = authHeader && authHeader.split(' ')[1];
 
+    //Dado que no haya un token, se retorna un error 403
     if (!token) {
         return res.status(403).json({ 
         error: 'User not authenticated'
         });
     }
 
-    //Verificar el token
+    //Verificación del token 
     jwt.verify(token, JWT_SECRET, (err, user) => {
+        //Dado el caso que haya un error en la verificación
         if (err) {
         return res.status(403).json({ 
             error: 'Invalid token',
@@ -36,4 +38,5 @@ const authenticateToken = (req, res, next) => {
     });
 };
 
+//Exportación del middleware
 module.exports = authenticateToken;
