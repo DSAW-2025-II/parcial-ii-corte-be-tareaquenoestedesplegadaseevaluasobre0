@@ -1,6 +1,11 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/PzXEPZ_E)
+# Nombres: Martín Polo Santini / Pablo Andrés Tamayo González
 
+[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/xXpI7QGh)
 # 📝 Enunciado del examen
+
+Link BE: https://parcial-ii-corte-be-tareaquenoested.vercel.app/
+
+Link FE: https://parcial-ii-corte-fe-tareaquenoested.vercel.app/
 
 Vas a construir una **arquitectura de tres capas**:
 
@@ -158,9 +163,4 @@ fetch('/api/protected-route', {
 - **Despliegue**: 1.0  
 - **Seguridad de los endpoints** (uso correcto de tokens JWT): 2.0  
 - **Buenas prácticas de desarrollo** (variables de entorno, `.gitignore`, `express.Router`, middlewares): 0.5  
-- **Funcionalidad**: 1.5  
-
-
-
-
-
+- **Funcionalidad**: 1.5 
