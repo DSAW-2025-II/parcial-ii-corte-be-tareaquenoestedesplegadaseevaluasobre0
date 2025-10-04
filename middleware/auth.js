@@ -16,7 +16,7 @@ const authenticateToken = (req, res, next) => {
     //Dado que no haya un token, se retorna un error 403
     if (!token) {
         return res.status(403).json({ 
-        error: 'User not authenticated'
+        error: "User not authenticated"
         });
     }
 
@@ -25,8 +25,7 @@ const authenticateToken = (req, res, next) => {
         //Dado el caso que haya un error en la verificación
         if (err) {
         return res.status(403).json({ 
-            error: 'Invalid token',
-            message: 'Token expirado o inválido'
+            error: "User not authenticated"
         });
         }
 

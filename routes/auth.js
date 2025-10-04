@@ -14,13 +14,6 @@ router.post('/auth', (req, res) => {
   //Extracción del correo y contraseña del cuerpo del request
   const { email, password } = req.body;
 
-  //Se valida que existan los campos
-  if (!email || !password) {
-    return res.status(400).json({ 
-      error: 'Se requieren el correo y la contraseña' 
-    });
-  }
-
   //Se valida que las credenciales sean correctas
   if (email === VALID_EMAIL && password === VALID_PASSWORD) {
     
@@ -42,7 +35,7 @@ router.post('/auth', (req, res) => {
 
   //Dado el caso que las credenciales sean inválidas
   res.status(400).json({ 
-    error: 'invalid credentials' 
+    "error": "invalid credentials"
   });
 });
 
